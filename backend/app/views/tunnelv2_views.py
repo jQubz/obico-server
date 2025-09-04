@@ -392,6 +392,7 @@ def _tunnel_http_req_and_wait_for_resp(octoprinttunnel, path, method, req_header
         'content-encoding',  # if its set, it is probably incorrect/unapplicable
         'x-frame-options',  # response must load in TSD's iframe
         'set-cookie',
+        'transfer-encoding',
     )
     for k, v in data['response']['headers'].items():
         if k.lower() in to_ignore:
